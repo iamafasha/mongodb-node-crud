@@ -25,4 +25,11 @@ We want a blog app that a user can :-
 - [x] Setup Node on the Local machine
 - [ ] Create boilerplate on computer
 - [ ] Setup Environment Variables support
+
+
+##Stage 5: Testing the Product
+- [ ] Setup Unit testing
+
+##Stage 6: Deployment in the Market and Maintenance
 - [ ] Setup Automatic Deployment
+- [ ] Deploy Project
