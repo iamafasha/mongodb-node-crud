@@ -14,7 +14,7 @@ We want a blog app that a user can :-
 
     - Design tool: Baslamiq mockup
     - Server: Nginx self-hosted vps
-    - Database: MongoDB 
+    - Database: MongoDB and it's Driver depending on the language
     - Backend Language: (Node Javascript)
     - FRONTEND: HTML and CSS
 
@@ -33,3 +33,15 @@ We want a blog app that a user can :-
 ##Stage 6: Deployment in the Market and Maintenance
 - [ ] Setup Automatic Deployment
 - [ ] Deploy Project
+
+
+
+
+#More documentation 
+
+#MongoDB 
+
+This is a an document model database(NoSQL) and stores data in form of Objects like JSON 
+
+we will use community edition so we can host it ourselves. Here is the link to the documentation we are referring to as we use it https://docs.mongodb.com/manual
+
