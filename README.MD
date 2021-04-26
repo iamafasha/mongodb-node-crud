@@ -23,9 +23,14 @@ We want a blog app that a user can :-
 - [x] Create Github repo
 - [x] Setup MongoDB on Local Machine
 - [x] Setup Node on the Local machine
-- [ ] Create boilerplate on computer
+- [x] Create boilerplate on computer
+    - [x] Initialize(Hello world)
+    - [x] Add package manager (npm)
+    - [ ] Add environment variables
+    - [ ] Setup database connection
+- [ ] Design the (UI)
+- [ ] Setup Database connection
 - [ ] Setup Environment Variables support
-
 
 ##Stage 5: Testing the Product
 - [ ] Setup Unit testing
@@ -45,3 +50,7 @@ This is a an document model database(NoSQL) and stores data in form of Objects l
 
 we will use community edition so we can host it ourselves. Here is the link to the documentation we are referring to as we use it https://docs.mongodb.com/manual
 
+
+#NodeJs 
+
+Copied boilerplate from https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework. 

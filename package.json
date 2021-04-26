@@ -1,0 +1,23 @@
+{
+  "name": "node_blog_app",
+  "version": "1.0.0",
+  "description": "## Stage 1: Planning and Requirement Analysis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamafasha/mongodb-node-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamafasha/mongodb-node-crud/issues"
+  },
+  "homepage": "https://github.com/iamafasha/mongodb-node-crud#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
