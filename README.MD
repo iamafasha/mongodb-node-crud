@@ -26,21 +26,24 @@ We want a blog app that a user can :-
 - [x] Create boilerplate on computer
     - [x] Initialize(Hello world)
     - [x] Add package manager (npm)
-    - [ ] Add environment variables
-    - [ ] Setup database connection
+    - [x] Add environment variables
+    - [x] Setup database connection
 - [ ] Design the (UI)
-- [ ] Setup Database connection
-- [ ] Setup Environment Variables support
+- [ ] Create endpoints
+- [ ] Connect UI to backend
+
 
 ##Stage 5: Testing the Product
 - [ ] Setup Unit testing
 
 ##Stage 6: Deployment in the Market and Maintenance
-- [ ] Setup Automatic Deployment
-- [ ] Deploy Project
-
-
-
+- [ ] Install Server Reqirements
+    - [x] Install Node
+    - [ ] Install MongoDB
+- [ ] Setup create env on server
+- [ ] Setup Github Actions (github action will do the following)
+    - [ ] Pull the code on main from github(Not replacing files)
+- [ ] Setup Nginx
 
 #More documentation 
 
@@ -52,5 +55,8 @@ we will use community edition so we can host it ourselves. Here is the link to t
 
 
 #NodeJs 
+##What is node 
+Node allows developers to write JavaScript code that runs directly in a computer process itself instead of in a browser. Node can, therefore, be used to write server-side applications with access to the operating system, file system, and everything else required to build fully-functional applications.
 
 Copied boilerplate from https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework. 
+

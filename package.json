@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/iamafasha/mongodb-node-crud#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.6"
   }
 }

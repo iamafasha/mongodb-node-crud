@@ -2,8 +2,20 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 require('dotenv').config()
+const MongoClient = require('mongodb').MongoClient;
+let database;
 
-var mimeTypes = {
+async function run(){
+  const url = process.env.DB_URL;
+  const dbName = process.env.DB_NAME;
+  const client = new MongoClient(url);
+  const error =await client.connect();
+  const db = client.db(dbName);
+  database = db
+}
+run()
+
+const mimeTypes = {
     '.html': 'text/html',
     '.js': 'text/javascript',
     '.css': 'text/css',
@@ -21,11 +33,10 @@ var mimeTypes = {
     '.wasm': 'application/wasm'
 };
 
-
 http.createServer(function (request, response) {
-    console.log('request ', request.url);
     if(request.url.startsWith('/api')){
         response.writeHead(200, { 'Content-Type': 'text/html' });
+        database.collection('users').find().toArray().then(res=>console.log(res));
         response.write('Hello World!');
         response.end();
 
@@ -60,4 +71,6 @@ http.createServer(function (request, response) {
         });
     }
 }).listen(8125);
+
+
 console.log('Server running at http://127.0.0.1:8125/');
