@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head> 
+
 <body>
-    Add post page
+
+    <div class="container p-5 pt-10 mx-auto">
+        <form class="min-w-full" method="POST" action="/add_post" >
+            <h2 class="text-4xl">Add A new post</h2>
+            <br />
+            <div class="form-group">
+                <textarea class="form-check-input rounded min-w-full border-2 border-gray-300 p-1" rows="6" type="checkbox" name="post"
+                    id="invalidCheck" placeholder="Type your post here" required></textarea>
+            </div>
+
+            <div class="flex space-x-1">
+            <a class="inline-flex items-center px-4 py-2 border border-transparent cursor-pointer rounded-md shadow-sm text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 bg-black text-white" href="/">Cancel</a>
+
+            <button type="submit" class="inline-flex cursor-pointer items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Add Post
+            </button>
+            </div>
+
+
+        </form>
+    </div>
 </body>
+
 </html>

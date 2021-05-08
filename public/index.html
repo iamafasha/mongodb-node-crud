@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Home | Blog App Home</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+
 <body>
-    <h2>Welcome to my blog app</h2>
+
+    <div class="lg:flex py-9 px-96 lg:items-center lg:justify-between">
+        <div class="flex-1 min-w-0">
+            <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+                Blog App
+            </h2>
+        </div>
+
+        <div class="mt-5flex  lg:mt-0 lg:ml-4"> 
+             
+              
+                                                                                                                                                                                
+
+
+            <span class="sm:ml-3">
+                <a href="/add-post.html" class="inline-flex cursor-pointer items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Add Post
+                </a>
+
+                <a href="/logout" class="inline-flex cursor-pointer items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Logout
+                </a>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="grid grid-cols-4  px-9  gap-4 blogs" id="blogs"></div>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            jQuery.ajax({
+                url:"/endpoint/posts",
+                success: function (res){
+                    console.log(res)
+                    res.posts.forEach(function(post){
+                        var html = `
+                        <div class="bg-gray-100 p-8  md:p-8 text-center md:text-left space-y-4">
+
+                            <figure class="md:flex rounded-xl  md:p-0">
+                                <div class="pt-6">
+                                    <blockquote>
+                                        <p class="text-lg font-semibold">"${post.text}"</p>
+                                    </blockquote>
+                                    <figcaption class="font-medium">
+                                        <div class="text-cyan-600">
+                                            ${post.user_name}
+                                        </div>
+                                        <div class="text-gray-500">
+                                            ${(new Date(post.created_at)).toLocaleString()}
+                                        </div>
+                                    </figcaption>
+                                </div>
+                            </figure>
+                            <div class="flex space-x-3 mb-4 text-sm font-medium">
+                                <div class="flex-auto flex space-x-3">
+                                    ${ post.user_id == res.user_id?"<a href=\"/delete?post_id="+post._id+"\" class=\"w-1/4 cursor-pointer flex p-2 items-center justify-center rounded-md bg-black text-white\" type=\"submit\">Delete Post</a><a href=/edit-post.html?post_id="+post._id+"&post="+post.text+"\" class=\"w-1/4 cursor-pointer flex p-2 items-center justify-center rounded-md border border-gray-300\" type=\"button\">Edit Post</a>":"" }
+                                </div>
+                            </div>
+                        </div>`;
+
+                        $('#blogs.blogs').append(html)
+                    })
+                }
+            })
+        });
+
+        
+    </script>
+
 </body>
+
 </html>
